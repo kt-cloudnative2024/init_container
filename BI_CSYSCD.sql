@@ -1,0 +1,61 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: my-mariadb:3306
+-- Generation Time: May 21, 2024 at 07:37 AM
+-- Server version: 11.3.2-MariaDB
+-- PHP Version: 8.2.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `baseinfo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `BI_CSYSCD`
+--
+
+CREATE TABLE `BI_CSYSCD` (
+  `GRP_ID` varchar(4) NOT NULL,
+  `CD` varchar(7) NOT NULL,
+  `NAME` varchar(50) NOT NULL,
+  `OUTPUT_SEQ` decimal(10,0) DEFAULT NULL,
+  `REF1` varchar(10) DEFAULT NULL,
+  `REF2` varchar(20) DEFAULT NULL,
+  `REF3` decimal(10,0) DEFAULT NULL,
+  `REMARK` varchar(120) DEFAULT NULL,
+  `REG_DATE` datetime DEFAULT NULL,
+  `REG_OFC_CD` varchar(6) DEFAULT NULL,
+  `REGER_EMP_NO` varchar(9) DEFAULT NULL,
+  `REGER_EMP_NAME` varchar(10) DEFAULT NULL,
+  `DEFINE_NAME` varchar(80) DEFAULT NULL,
+  `END_EMP_NO` varchar(9) DEFAULT NULL,
+  `END_EMP_NAME` varchar(10) DEFAULT NULL,
+  `END_DATE` varchar(8) DEFAULT NULL,
+  `START_DATE` varchar(8) DEFAULT NULL,
+  `REF4` varchar(20) DEFAULT NULL,
+  `REF5` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `BI_CSYSCD`
+--
+
+INSERT INTO `BI_CSYSCD` (`GRP_ID`, `CD`, `NAME`, `OUTPUT_SEQ`, `REF1`, `REF2`, `REF3`, `REMARK`, `REG_DATE`, `REG_OFC_CD`, `REGER_EMP_NO`, `REGER_EMP_NAME`, `DEFINE_NAME`, `END_EMP_NO`, `END_EMP_NAME`, `END_DATE`, `START_DATE`, `REF4`, `REF5`) VALUES
+('0002', '01', '유관정보통신', NULL, NULL, NULL, NULL, NULL, '2000-10-23 00:00:00', '000207', '111111111', '나유미', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('0002', '03', '경제', NULL, NULL, NULL, NULL, NULL, '2000-10-23 00:00:00', '000207', '111111111', '나유미', 'C_CCR_SVC_TYPE_700_ECONOMIC', NULL, NULL, NULL, NULL, NULL, NULL),
+('0002', '04', '교육', NULL, NULL, NULL, NULL, NULL, '2000-10-23 00:00:00', '000207', '111111111', '나유미', 'C_CCR_SVC_TYPE_700_EDUCATION', NULL, NULL, NULL, NULL, NULL, NULL),
+('0002', '05', '음악', NULL, NULL, NULL, NULL, NULL, '2000-10-23 00:00:00', '000207', '111111111', '나유미', 'C_CCR_SVC_TYPE_700_MUSIC', NULL, NULL, NULL, NULL, NULL, NULL),
+('0002', '07', '문화', NULL, NULL, NULL, NULL, NULL, '2000-10-23 00:00:00', '000207', '111111111', '나유미', 'C_CCR_SVC_TYPE_700_CULTURE', NULL, NULL, NULL, NULL, NULL, NULL);
